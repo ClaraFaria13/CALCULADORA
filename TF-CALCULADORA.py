@@ -1,16 +1,11 @@
 R1= input("Você quer fazer uma operação matemática? [s] ou [n]:")
-    
-A= '+'
-S= '-'
-M= '*'
-D= '/'
 
 A2=[]
 S2=[]
 M2=[]
 D2=[]
 
-if R1 == 's':
+while R1 == 's':
     A3= int(input("Digite A:"))
     B= int(input("Digite B:"))
     O= input("Digite a operação:")
@@ -38,20 +33,15 @@ if R1 == 's':
                 return A3 / B
             else:
                 return "Divisão recusada :/."
-
         R2= D(A3, B)
         D2.append(R2)
         print(f"{A3} / {B} = {R2}")
     else:
         print("Operação recusada :/")
-elif R1 == 'n':
-    print("Calculadora desligada :/")
-else:
-    print("Resposta desconhecida :/")
-    
-while R1 == 's':
-    R1= input("Você quer fazer uma operação matemática? [s] ou [n]")
-    
+    R3 = input("Você quer fazer uma operação matemática? [s] ou [n]:")
+    if R1 or R3 == 'n':
+        print("Calculadora desligada :/")
+
 print("Histórico de resultados:")
 print(f"Adições efetuadas: {A2}")
 print(f"Subtrações efetuadas: {S2}")
